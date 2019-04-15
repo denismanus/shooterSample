@@ -1,0 +1,25 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "shooter",
+  "main": "Server.js",
+  "dependencies": {
+    "shortid": "^2.2.14",
+    "socket.io": "^2.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/denismanus/shooterSample.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/denismanus/shooterSample/issues"
+  },
+  "homepage": "https://github.com/denismanus/shooterSample#readme"
+}
