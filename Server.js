@@ -65,23 +65,20 @@ io.on('connection', function(socket){
         };
     
         players[thisPlayerId] = player;
-        socket.broadcast.emit('requestPosition');
-        socket.broadcast.emit('requestDestination');
         
-        for(var playerId in players){
+        // for(var playerId in players){
             
-            if(playerId == thisPlayerId)
-                continue;
+        //     if(playerId == thisPlayerId)
+        //         continue;
             
-            socket.emit('spawn', players[playerId]);
-            console.log('sending spawn to new player for id: ', playerId);
-        };
+        //     socket.emit('spawn', players[playerId]);
+        //     console.log('sending spawn to new player for id: ', playerId);
+        // };
     })
 
     socket.on('killPlayer', function(data){
-        delete players[thisPlayerId];
-        
-        socket.broadcast.emit('playerKilled', { id: thisPlayerId });
+        delete players[data.playerId];
+        socket.broadcast.emit('playerKilled', { id: data.playerId });
     });
 
     socket.on('disconnect', function(data){
